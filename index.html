@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/style.css" />
+    <title>KFC</title>
+  </head>
+  <body class="bg-black">
+    <!-- header -->
+    <header
+      class="w-full h-[60px] sm:h-[80px] fixed z-10 px-2 sm:px-3 flex items-center justify-between bg-black">
+      <nav class="flex place-items-center grow lg:mx-[60px]">
+        <ul class="place-items-center gap-6 hidden sm:flex">
+          <li>
+            <a href="/"><i class="fa-solid fa-bars text-2xl text-white"></i></a>
+          </li>
+          <li class="w-[100px]">
+            <a href="/"
+              ><img
+                src="/src/kffclogo.png"
+                alt="logo"
+                loading="lazy"
+                class="w-full object-cover object-center"
+            /></a>
+          </li>
+          <li
+            class="sm:w-fit sm:h-[50px] border-2 border-[#ea002a] px-6 py-2 rounded-md bg-[#1c1816]">
+            <a
+              href="#"
+              class="flex items-center justify-between gap-3 w-full h-full text-white"
+              ><img
+                src="/src/delivery.png"
+                alt="delivery"
+                loading="lazy"
+                class="h-full w-full" />Delivery</a
+            >
+          </li>
+          <li class="sm:w-fit sm:h-[50px] px-6 py-2 rounded-md bg-[#1c1816]">
+            <a href="#" class="flex items-center gap-3 w-full h-full text-white"
+              ><img
+                src="/src/pickup.png"
+                alt="pickup"
+                loading="lazy"
+                class="h-full w-full" />Pickup</a
+            >
+          </li>
+        </ul>
+        <!-- mobile menu -->
+        <ul class="flex sm:hidden py-5">
+          <li>
+            <a href="/"
+              ><img
+                src="/src/kffclogo.png"
+                alt="logo"
+                loading="lazy"
+                class="w-[70px] object-cover object-center"
+            /></a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="flex gap-1 items-center">
+        <li>
+          <a href="#"
+            ><img
+              src="/src/bucket.svg"
+              alt="bucket"
+              loading="lazy"
+              class="w-[30px] h-[30px] flex md:w-[50px] md:h-[50px]"
+          /></a>
+        </li>
+        <li
+          class="bg-[#ea002a] px-3 py-1 login-btn rounded-md text-white sm:px-6">
+          <a href="#">Login</a>
+        </li>
+      </ul>
+    </header>
+
+    <section class="slider relative w-full pt-[50px] h-fit overflow-hidden">
+      <!-- Image Container -->
+      <div
+        id="sliderContainer"
+        class="flex w-full transition-transform duration-500 ease-in-out">
+        <img
+          src="/src/ist.jpg"
+          class="w-full object-cover object-bottom flex-shrink-0" />
+        <img
+          src="/src/four.jpg"
+          class="w-full object-cover object-bottom flex-shrink-0" />
+        <img
+          src="/src/second.jpg"
+          class="w-full object-cover object-bottom flex-shrink-0" />
+        <img
+          src="/src/third.jpg"
+          class="w-full object-cover object-bottom flex-shrink-0" />
+        <img
+          src="/src/five.jpg"
+          class="w-full object-cover object-bottom flex-shrink-0" />
+        <img
+          src="/src/six.jpg"
+          class="w-full object-cover object-bottom flex-shrink-0" />
+      </div>
+
+      <!-- Navigation Buttons -->
+      <button
+        id="next"
+        class="bg-[#ea002a] w-[20px] h-[20px] flex place-content-center text-2xl rounded-full absolute right-4 top-[60%] translate-y-[60%]">
+        <i class="fa-solid fa-angle-right text-[20px]"></i>
+      </button>
+      <button
+        id="prev"
+        class="bg-[#ea002a] flex place-content-center w-[20px] h-[20px] text-2xl rounded-full absolute left-4 top-[60%] translate-y-[60%]">
+        <i class="fa-solid fa-angle-left text-[20px]"></i>
+      </button>
+    </section>
+
+    <!-- deals available -->
+    <section class="w-[90%] mx-auto mt-[10px]">
+      <!-- reorrder button -->
+      <a
+        href="/"
+        role="button"
+        class="bg-[#ea002a] py-[10px] rounded-md mb-[40px] font-bold flex place-content-center text-white max-w-[600px] mx-auto"
+        >REORDER</a
+      >
+      <!-- explore menu -->
+      <section
+        class="pt-[60px] xc w-full mx-auto flex gap-[30px] overflow-x-scroll overflow-y-hidden scroll-smooth mb-[20px]">
+        <a
+          href="/"
+          class="translateevent flex flex-col place-items-center merarounded w-[200px] bg-[#1C1816] h-[200px] flex-shrink-0 before:content-[' '] before:w-[15px] before:h-[15px] before:rounded-full before:bg-black relative before:absolute before:right-[5px] before:bottom-[5px]">
+          <div
+            class="w-180px h-[150px] flex flex-col place-items-center text-white">
+            <img
+              src="/src/burger.png"
+              alt="burger"
+              loading="lazy"
+              class="w-[190px] h-[150px]" />
+            <h2 class="pb-[7px]">Everyday Value</h2>
+            <span class="w-[60px] h-[3px] bg-[#ea002a]">&ThinSpace;</span>
+          </div>
+        </a>
+        <a
+          href="/"
+          class="translateevent merarounded w-[200px] bg-[#1C1816] h-[200px] flex-shrink-0 before:content-[' '] before:w-[15px] before:h-[15px] before:rounded-full before:bg-black relative before:absolute before:right-[5px] before:bottom-[5px]">
+          <div
+            class="w-180px h-[150px] flex flex-col place-items-center text-white">
+            <img
+              src="/src/combos.png"
+              alt="combos"
+              loading="lazy"
+              class="w-[190px] h-[150px]" />
+            <h2 class="pb-[7px] pl-[16px]">Ala Cartai-&-Combos</h2>
+            <span class="w-[60px] h-[3px] bg-[#ea002a]">&ThinSpace;</span>
+          </div>
+        </a>
+        <a
+          href="/"
+          class="translateevent merarounded w-[200px] flex flex-col place-items-center bg-[#1C1816] h-[200px] flex-shrink-0 before:content-[' '] before:w-[15px] before:h-[15px] before:rounded-full before:bg-black relative before:absolute before:right-[5px] before:bottom-[5px]">
+          <div
+            class="w-[180px] h-[150px] flex flex-col place-items-center text-white">
+            <img
+              src="/src/promotion.png"
+              alt="promotion"
+              loading="lazy"
+              class="w-[190px] h-[150px]" />
+            <h2 class="pb-[7px] pl-[16px]">Promotion</h2>
+            <span class="w-[60px] h-[3px] bg-[#ea002a]">&ThinSpace;</span>
+          </div>
+        </a>
+        <a
+          href="/"
+          class="translateevent merarounded w-[200px] bg-[#1C1816] h-[200px] flex-shrink-0 before:content-[' '] before:w-[15px] before:h-[15px] before:rounded-full before:bg-black relative before:absolute before:right-[5px] before:bottom-[5px]">
+          <div
+            class="w-[180px] h-[150px] flex flex-col place-items-center text-white">
+            <img
+              src="/src/singnaturebox.png"
+              alt="Signature Boxes"
+              loading="lazy"
+              class="w-[190px] h-[150px]" />
+            <h2 class="pb-[7px] pl-[16px]">Signature Boxes</h2>
+            <span class="w-[60px] h-[3px] bg-[#ea002a]">&ThinSpace;</span>
+          </div>
+        </a>
+        <a
+          href="/"
+          class="translateevent merarounded w-[200px] bg-[#1C1816] h-[200px] flex-shrink-0 before:content-[' '] before:w-[15px] before:h-[15px] before:rounded-full before:bg-black relative before:absolute before:right-[5px] before:bottom-[5px]">
+          <div
+            class="[w-180px] h-[150px] flex flex-col place-items-center text-white">
+            <img
+              src="/src/sharing.png"
+              alt="Sharing"
+              loading="lazy"
+              class="w-[190px] h-[150px]" />
+            <h2 class="pb-[7px] pl-[16px]">Sharing</h2>
+            <span class="w-[60px] h-[3px] bg-[#ea002a]">&ThinSpace;</span>
+          </div>
+        </a>
+        <a
+          href="/"
+          class="translateevent merarounded w-[200px] bg-[#1C1816] h-[200px] flex-shrink-0 before:content-[' '] before:w-[15px] before:h-[15px] before:rounded-full before:bg-black relative before:absolute before:right-[5px] before:bottom-[5px]">
+          <div
+            class="[w-180px] h-[150px] flex flex-col place-items-center text-white">
+            <img
+              src="/src/burger.png"
+              alt="burger"
+              loading="lazy"
+              class="w-[190px] h-[150px]" />
+            <h2 class="pb-[7px] pl-[16px]">Snacks-&-Beverages</h2>
+            <span class="w-[60px] h-[3px] bg-[#ea002a]">&ThinSpace;</span>
+          </div>
+        </a>
+        <a
+          href="/"
+          class="translateevent merarounded w-[200px] bg-[#1C1816] h-[200px] flex-shrink-0 before:content-[' '] before:w-[15px] before:h-[15px] before:rounded-full before:bg-black relative before:absolute before:right-[5px] before:bottom-[5px]">
+          <div
+            class="[w-180px] h-[150px] flex flex-col place-items-center text-white">
+            <img
+              src="/src/burger.png"
+              alt="burger"
+              loading="lazy"
+              class="w-[190px] h-[150px]" />
+            <h2 class="pb-[7px] pl-[16px]">Everyday Value</h2>
+            <span class="w-[60px] h-[3px] bg-[#ea002a]">&ThinSpace;</span>
+          </div>
+        </a>
+        <a
+          href="/"
+          class="translateevent merarounded w-[200px] bg-[#1C1816] h-[200px] flex-shrink-0 before:content-[' '] before:w-[15px] before:h-[15px] before:rounded-full before:bg-black relative before:absolute before:right-[5px] before:bottom-[5px]">
+          <div
+            class="[w-180px] h-[150px] flex flex-col place-items-center text-white">
+            <img
+              src="/src/burger.png"
+              alt="burger"
+              loading="lazy"
+              class="w-[190px] h-[150px]" />
+            <h2 class="pb-[7px] pl-[16px]">Everyday Value</h2>
+            <span class="w-[60px] h-[3px] bg-[#ea002a]">&ThinSpace;</span>
+          </div>
+        </a>
+        <a
+          href="/"
+          class="translateevent merarounded w-[200px] bg-[#1C1816] h-[200px] flex-shrink-0 before:content-[' '] before:w-[15px] before:h-[15px] before:rounded-full before:bg-black relative before:absolute before:right-[5px] before:bottom-[5px]">
+          <div
+            class="[w-180px] h-[150px] flex flex-col place-items-center text-white">
+            <img
+              src="/src/burger.png"
+              alt="burger"
+              loading="lazy"
+              class="w-[190px] h-[150px]" />
+            <h2 class="pb-[7px] pl-[16px]">Everyday Value</h2>
+            <span class="w-[60px] h-[3px] bg-[#ea002a]">&ThinSpace;</span>
+          </div>
+        </a>
+      </section>
+
+      <!-- BEST SELLERS -->
+      <section class="mt-[30px] W-90% mx-auto mt-10px text-white">
+        <h2
+          class="text-2xl before:content-[' '] before:w-[100px] before:h-[3px] before:bg-[#ea002a] before:bottom-[-4px] before:left-0 before:absolute relative mb-[20px]">
+          BEST SELLERS
+        </h2>
+        <section class="flex gap-[10px] overflow-x-scroll">
+          <a
+            href="#"
+            class="relative w-[200px] h-[350px] bg-[#1c1816] flex shrink-0 flex-col place-content-around">
+            <h6 class="mt-[20px] pl-[16px] font-extrabold text-[18px]">
+              Kruch Burger
+            </h6>
+            <h3
+              class="bg-[#ea002a] font-semibold w-[80px] text-xl absolute right-0 top-[25%] inline pl-[6px]">
+              <sub>Rs</sub>310
+            </h3>
+            <img
+              src="/src/kruchburger.png"
+              alt="Krunchburger"
+              loading="lazy"
+              class="self-end" />
+            <div
+              class="flex gap-[4px] absolute top-0 left-[50%] translate-x-[-50%]">
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="relative w-[200px] h-[350px] bg-[#1c1816] flex shrink-0 flex-col place-content-around">
+            <h6 class="mt-[20px] pl-[16px] font-extrabold text-[18px]">
+              Kruch Burger
+            </h6>
+            <h3
+              class="bg-[#ea002a] font-semibold w-[80px] text-xl absolute right-0 top-[25%] inline pl-[6px]">
+              <sub>Rs</sub>310
+            </h3>
+            <img
+              src="/src/kruchburger.png"
+              alt="Krunchburger"
+              loading="lazy"
+              class="self-end" />
+            <div
+              class="flex gap-[4px] absolute top-0 left-[50%] translate-x-[-50%]">
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="relative w-[200px] h-[350px] bg-[#1c1816] flex shrink-0 flex-col place-content-around">
+            <h6 class="mt-[20px] pl-[16px] font-extrabold text-[18px]">
+              Kruch Burger
+            </h6>
+            <h3
+              class="bg-[#ea002a] font-semibold w-[80px] text-xl absolute right-0 top-[25%] inline pl-[6px]">
+              <sub>Rs</sub>310
+            </h3>
+            <img
+              src="/src/kruchburger.png"
+              alt="Krunchburger"
+              loading="lazy"
+              class="self-end" />
+            <div
+              class="flex gap-[4px] absolute top-0 left-[50%] translate-x-[-50%]">
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="relative w-[200px] h-[350px] bg-[#1c1816] flex shrink-0 flex-col place-content-around">
+            <h6 class="mt-[20px] pl-[16px] font-extrabold text-[18px]">
+              Kruch Burger
+            </h6>
+            <h3
+              class="bg-[#ea002a] font-semibold w-[80px] text-xl absolute right-0 top-[25%] inline pl-[6px]">
+              <sub>Rs</sub>310
+            </h3>
+            <img
+              src="/src/kruchburger.png"
+              alt="Krunchburger"
+              loading="lazy"
+              class="self-end" />
+            <div
+              class="flex gap-[4px] absolute top-0 left-[50%] translate-x-[-50%]">
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="relative w-[200px] h-[350px] bg-[#1c1816] flex shrink-0 flex-col place-content-around">
+            <h6 class="mt-[20px] pl-[16px] font-extrabold text-[18px]">
+              Kruch Burger
+            </h6>
+            <h3
+              class="bg-[#ea002a] font-semibold w-[80px] text-xl absolute right-0 top-[25%] inline pl-[6px]">
+              <sub>Rs</sub>310
+            </h3>
+            <img
+              src="/src/kruchburger.png"
+              alt="Krunchburger"
+              loading="lazy"
+              class="self-end" />
+            <div
+              class="flex gap-[4px] absolute top-0 left-[50%] translate-x-[-50%]">
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="relative w-[200px] h-[350px] bg-[#1c1816] flex shrink-0 flex-col place-content-around">
+            <h6 class="mt-[20px] pl-[16px] font-extrabold text-[18px]">
+              Kruch Burger
+            </h6>
+            <h3
+              class="bg-[#ea002a] font-semibold w-[80px] text-xl absolute right-0 top-[25%] inline pl-[6px]">
+              <sub>Rs</sub>310
+            </h3>
+            <img
+              src="/src/kruchburger.png"
+              alt="Krunchburger"
+              loading="lazy"
+              class="self-end" />
+            <div
+              class="flex gap-[4px] absolute top-0 left-[50%] translate-x-[-50%]">
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="relative w-[200px] h-[350px] bg-[#1c1816] flex shrink-0 flex-col place-content-around">
+            <h6 class="mt-[20px] pl-[16px] font-extrabold text-[18px]">
+              Kruch Burger
+            </h6>
+            <h3
+              class="bg-[#ea002a] font-semibold w-[80px] text-xl absolute right-0 top-[25%] inline pl-[6px]">
+              <sub>Rs</sub>310
+            </h3>
+            <img
+              src="/src/kruchburger.png"
+              alt="Krunchburger"
+              loading="lazy"
+              class="self-end" />
+            <div
+              class="flex gap-[4px] absolute top-0 left-[50%] translate-x-[-50%]">
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="relative w-[200px] h-[350px] bg-[#1c1816] flex shrink-0 flex-col place-content-around">
+            <h6 class="mt-[20px] pl-[16px] font-extrabold text-[18px]">
+              Kruch Burger
+            </h6>
+            <h3
+              class="bg-[#ea002a] font-semibold w-[80px] text-xl absolute right-0 top-[25%] inline pl-[6px]">
+              <sub>Rs</sub>310
+            </h3>
+            <img
+              src="/src/kruchburger.png"
+              alt="Krunchburger"
+              loading="lazy"
+              class="self-end" />
+            <div
+              class="flex gap-[4px] absolute top-0 left-[50%] translate-x-[-50%]">
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+            </div>
+          </a>
+          <a
+            href="#"
+            class="relative w-[200px] h-[350px] bg-[#1c1816] flex shrink-0 flex-col place-content-around">
+            <h6 class="mt-[20px] pl-[16px] font-extrabold text-[18px]">
+              Kruch Burger
+            </h6>
+            <h3
+              class="bg-[#ea002a] font-semibold w-[80px] text-xl absolute right-0 top-[25%] inline pl-[6px]">
+              <sub>Rs</sub>310
+            </h3>
+            <img
+              src="/src/kruchburger.png"
+              alt="Krunchburger"
+              loading="lazy"
+              class="self-end" />
+            <div
+              class="flex gap-[4px] absolute top-0 left-[50%] translate-x-[-50%]">
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+            </div>
+          </a>
+
+          <a
+            href="#"
+            class="relative w-[200px] h-[350px] bg-[#1c1816] flex shrink-0 flex-col place-content-around">
+            <h6 class="mt-[20px] pl-[16px] font-extrabold text-[18px]">
+              Hot Wings Bucket
+            </h6>
+            <h3
+              class="bg-[#ea002a] font-semibold w-[80px] text-xl absolute right-0 top-[25%] inline pl-[6px]">
+              <sub>Rs</sub>310
+            </h3>
+            <img
+              src="/src/plainwings.png"
+              alt="Krunchburger"
+              loading="lazy"
+              class="self-end" />
+            <div
+              class="flex gap-[4px] absolute top-0 left-[50%] translate-x-[-50%]">
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+            </div>
+          </a>
+
+          <a
+            href="#"
+            class="relative w-[200px] h-[350px] bg-[#1c1816] flex shrink-0 flex-col place-content-around">
+            <h6 class="mt-[20px] pl-[16px] font-extrabold text-[18px]">
+              K-Zig
+            </h6>
+            <h3
+              class="bg-[#ea002a] font-semibold w-[80px] text-xl absolute right-0 top-[25%] inline pl-[6px]">
+              <sub>Rs</sub>310
+            </h3>
+            <img
+              src="/src/combos.png"
+              alt="Krunchburger"
+              loading="lazy"
+              class="self-end" />
+            <div
+              class="flex gap-[4px] absolute top-0 left-[50%] translate-x-[-50%]">
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+              <span class="w-[15px] h-[22px] bg-[#ea002a]"></span>
+            </div>
+          </a>
+        </section>
+      </section>
+
+      <!-- TOP DEALS -->
+      <section class="mt-[30px] W-90% mx-auto mt-10px text-white">
+        <h2
+          class="text-2xl before:content-[' '] before:w-[100px] before:h-[3px] before:bg-[#ea002a] before:bottom-[-4px] before:left-0 before:absolute relative mb-[20px]">
+          BEST DEALS
+        </h2>
+        <section class="w-full pb-[10px] flex gap-[16px] overflow-x-scroll">
+          <!-- card -->
+          <div
+            class="relative max-w-[285px] min-h-[380px] shrink-0 grow-0 bg-[#1C1816] flex flex-col p-[12px] rounded-lg justify-around">
+            <div class="flex justify-center w-3/4 h-[180px] mx-auto">
+              <img
+                src="/src/burger.png"
+                alt=""
+                class="w-full h-full object-cover object-center" />
+            </div>
+            <!-- deals details -->
+            <div>
+              <h3 class="font-bold text-2xl pb-[4px]">Zinger Stack Combo</h3>
+              <p class="pb-[4px]">
+                1 Zinger Stacker + 1 Regular fries + 1 Regular drink
+              </p>
+              <h4 class="font-bold">RS 950</h4>
+            </div>
+
+            <!-- absolute items -->
+            <button
+              class="absolute bottom-[-4px] left-[50%] translate-x-[-50%] bg-[#ea002a] rounded-md px-[4px] py-[2px] min-w-[120px]">
+              + ADD TO BUCKET
+            </button>
+            <i
+              class="fa-regular cursor-pointer fa-heart absolute top-[10px] right-[10px] text-[#ea002a] text-2xl"></i>
+            <div
+              class="flex gap-[4px] absolute top-0 left-[50%] translate-x-[-50%]">
+              <span class="w-[16px] h-[25px] bg-[#ea002a]"></span>
+              <span class="w-[16px] h-[25px] bg-[#ea002a]"></span>
+              <span class="w-[16px] h-[25px] bg-[#ea002a]"></span>
+            </div>
+          </div>
+          <div
+            class="relative max-w-[285px] min-h-[380px] shrink-0 grow-0 bg-[#1C1816] flex flex-col p-[12px] rounded-lg justify-around">
+            <div class="flex justify-center w-3/4 h-[180px] mx-auto">
+              <img
+                src="/src/burger.png"
+                alt=""
+                class="w-full h-full object-cover object-center" />
+            </div>
+            <!-- deals details -->
+            <div>
+              <h3 class="font-bold text-2xl pb-[4px]">Zinger Stack Combo</h3>
+              <p class="pb-[4px]">
+                1 Zinger Stacker + 1 Regular fries + 1 Regular drink
+              </p>
+              <h4 class="font-bold">RS 950</h4>
+            </div>
+
+            <!-- absolute items -->
+            <button
+              class="absolute bottom-[-4px] left-[50%] translate-x-[-50%] bg-[#ea002a] rounded-md px-[4px] py-[2px] min-w-[120px]">
+              + ADD TO BUCKET
+            </button>
+            <i
+              class="fa-regular cursor-pointer fa-heart absolute top-[10px] right-[10px] text-[#ea002a] text-2xl"></i>
+            <div
+              class="flex gap-[4px] absolute top-0 left-[50%] translate-x-[-50%]">
+              <span class="w-[16px] h-[25px] bg-[#ea002a]"></span>
+              <span class="w-[16px] h-[25px] bg-[#ea002a]"></span>
+              <span class="w-[16px] h-[25px] bg-[#ea002a]"></span>
+            </div>
+          </div>
+          <div
+            class="relative max-w-[285px] min-h-[380px] shrink-0 grow-0 bg-[#1C1816] flex flex-col p-[12px] rounded-lg justify-around">
+            <div class="flex justify-center w-3/4 h-[180px] mx-auto">
+              <img
+                src="/src/burger.png"
+                alt=""
+                class="w-full h-full object-cover object-center" />
+            </div>
+            <!-- deals details -->
+            <div>
+              <h3 class="font-bold text-2xl pb-[4px]">Zinger Stack Combo</h3>
+              <p class="pb-[4px]">
+                1 Zinger Stacker + 1 Regular fries + 1 Regular drink
+              </p>
+              <h4 class="font-bold">RS 950</h4>
+            </div>
+
+            <!-- absolute items -->
+            <button
+              class="absolute bottom-[-4px] left-[50%] translate-x-[-50%] bg-[#ea002a] rounded-md px-[4px] py-[2px] min-w-[120px]">
+              + ADD TO BUCKET
+            </button>
+            <i
+              class="fa-regular cursor-pointer fa-heart absolute top-[10px] right-[10px] text-[#ea002a] text-2xl"></i>
+            <div
+              class="flex gap-[4px] absolute top-0 left-[50%] translate-x-[-50%]">
+              <span class="w-[16px] h-[25px] bg-[#ea002a]"></span>
+              <span class="w-[16px] h-[25px] bg-[#ea002a]"></span>
+              <span class="w-[16px] h-[25px] bg-[#ea002a]"></span>
+            </div>
+          </div>
+          <div
+            class="relative max-w-[285px] min-h-[380px] shrink-0 grow-0 bg-[#1C1816] flex flex-col p-[12px] rounded-lg justify-around">
+            <div class="flex justify-center w-3/4 h-[180px] mx-auto">
+              <img
+                src="/src/burger.png"
+                alt=""
+                class="w-full h-full object-cover object-center" />
+            </div>
+            <!-- deals details -->
+            <div>
+              <h3 class="font-bold text-2xl pb-[4px]">Zinger Stack Combo</h3>
+              <p class="pb-[4px]">
+                1 Zinger Stacker + 1 Regular fries + 1 Regular drink
+              </p>
+              <h4 class="font-bold">RS 950</h4>
+            </div>
+
+            <!-- absolute items -->
+            <button
+              class="absolute bottom-[-4px] left-[50%] translate-x-[-50%] bg-[#ea002a] rounded-md px-[4px] py-[2px] min-w-[120px]">
+              + ADD TO BUCKET
+            </button>
+            <i
+              class="fa-regular cursor-pointer fa-heart absolute top-[10px] right-[10px] text-[#ea002a] text-2xl"></i>
+            <div
+              class="flex gap-[4px] absolute top-0 left-[50%] translate-x-[-50%]">
+              <span class="w-[16px] h-[25px] bg-[#ea002a]"></span>
+              <span class="w-[16px] h-[25px] bg-[#ea002a]"></span>
+              <span class="w-[16px] h-[25px] bg-[#ea002a]"></span>
+            </div>
+          </div>
+          <div
+            class="relative max-w-[285px] min-h-[380px] shrink-0 grow-0 bg-[#1C1816] flex flex-col p-[12px] rounded-lg justify-around">
+            <div class="flex justify-center w-3/4 h-[180px] mx-auto">
+              <img
+                src="/src/burger.png"
+                alt=""
+                class="w-full h-full object-cover object-center" />
+            </div>
+            <!-- deals details -->
+            <div>
+              <h3 class="font-bold text-2xl pb-[4px]">Zinger Stack Combo</h3>
+              <p class="pb-[4px]">
+                1 Zinger Stacker + 1 Regular fries + 1 Regular drink
+              </p>
+              <h4 class="font-bold">RS 950</h4>
+            </div>
+
+            <!-- absolute items -->
+            <button
+              class="absolute bottom-[-4px] left-[50%] translate-x-[-50%] bg-[#ea002a] rounded-md px-[4px] py-[2px] min-w-[120px]">
+              + ADD TO BUCKET
+            </button>
+            <i
+              class="fa-regular cursor-pointer fa-heart absolute top-[10px] right-[10px] text-[#ea002a] text-2xl"></i>
+            <div
+              class="flex gap-[4px] absolute top-0 left-[50%] translate-x-[-50%]">
+              <span class="w-[16px] h-[25px] bg-[#ea002a]"></span>
+              <span class="w-[16px] h-[25px] bg-[#ea002a]"></span>
+              <span class="w-[16px] h-[25px] bg-[#ea002a]"></span>
+            </div>
+          </div>
+          <div
+            class="relative max-w-[285px] min-h-[380px] shrink-0 grow-0 bg-[#1C1816] flex flex-col p-[12px] rounded-lg justify-around">
+            <div class="flex justify-center w-3/4 h-[180px] mx-auto">
+              <img
+                src="/src/burger.png"
+                alt=""
+                class="w-full h-full object-cover object-center" />
+            </div>
+            <!-- deals details -->
+            <div>
+              <h3 class="font-bold text-2xl pb-[4px]">Zinger Stack Combo</h3>
+              <p class="pb-[4px]">
+                1 Zinger Stacker + 1 Regular fries + 1 Regular drink
+              </p>
+              <h4 class="font-bold">RS 950</h4>
+            </div>
+
+            <!-- absolute items -->
+            <button
+              class="absolute bottom-[-4px] left-[50%] translate-x-[-50%] bg-[#ea002a] rounded-md px-[4px] py-[2px] min-w-[120px]">
+              + ADD TO BUCKET
+            </button>
+            <i
+              class="fa-regular cursor-pointer fa-heart absolute top-[10px] right-[10px] text-[#ea002a] text-2xl"></i>
+            <div
+              class="flex gap-[4px] absolute top-0 left-[50%] translate-x-[-50%]">
+              <span class="w-[16px] h-[25px] bg-[#ea002a]"></span>
+              <span class="w-[16px] h-[25px] bg-[#ea002a]"></span>
+              <span class="w-[16px] h-[25px] bg-[#ea002a]"></span>
+            </div>
+          </div>
+          <div
+            class="relative max-w-[285px] min-h-[380px] shrink-0 grow-0 bg-[#1C1816] flex flex-col p-[12px] rounded-lg justify-around">
+            <div class="flex justify-center w-3/4 h-[180px] mx-auto">
+              <img
+                src="/src/burger.png"
+                alt=""
+                class="w-full h-full object-cover object-center" />
+            </div>
+            <!-- deals details -->
+            <div>
+              <h3 class="font-bold text-2xl pb-[4px]">Zinger Stack Combo</h3>
+              <p class="pb-[4px]">
+                1 Zinger Stacker + 1 Regular fries + 1 Regular drink
+              </p>
+              <h4 class="font-bold">RS 950</h4>
+            </div>
+
+            <!-- absolute items -->
+            <button
+              class="absolute bottom-[-4px] left-[50%] translate-x-[-50%] bg-[#ea002a] rounded-md px-[4px] py-[2px] min-w-[120px]">
+              + ADD TO BUCKET
+            </button>
+            <i
+              class="fa-regular cursor-pointer fa-heart absolute top-[10px] right-[10px] text-[#ea002a] text-2xl"></i>
+            <div
+              class="flex gap-[4px] absolute top-0 left-[50%] translate-x-[-50%]">
+              <span class="w-[16px] h-[25px] bg-[#ea002a]"></span>
+              <span class="w-[16px] h-[25px] bg-[#ea002a]"></span>
+              <span class="w-[16px] h-[25px] bg-[#ea002a]"></span>
+            </div>
+          </div>
+
+          <!-- DEALS -->
+        </section>
+        <section class="w-full gap-[16px] grid lg:grid-cols-2 mx-auto">
+          <div class="rounded-md overflow-hidden">
+            <img src="/src/banner1.png" alt="" />
+          </div>
+          <div class="rounded-md overflow-hidden">
+            <img src="/src/banner2.png" alt="" />
+          </div>
+          <div class="rounded-md overflow-hidden">
+            <img src="/src/banner3.jpg" alt="" />
+          </div>
+          <div
+            class="rounded-md overflow-hidden flex flex-col gap-[10px] bg-white place-items-center place-content-center p-[20px]">
+            <img src="/src/banner4.png" alt="" />
+            <p class="text-black">
+              Adding 11 herbs and spices, Explore our menu and add items to your
+              cart.
+            </p>
+            <a
+              href="#"
+              class="bg-[#ea002a] font-extrabold text-white px-[10px] rounded-md w-full py-[10px] sm:max-w-[500px] text-center block"
+              >EXPLORE MENU</a
+            >
+          </div>
+        </section>
+      </section>
+    </section>
+
+    <!-- popup -->
+    <section
+      class="loginform w-[90%]  place-content-center min-h-[400px] bg-[#1c1816] rounded-[12px] fixed top-[55%] sm:top-[50%] left-[50%] -translate-x-1/2 -translate-y-1/2 flex items-center gap-[30px] flex-wrap p-[10px]">
+      <!-- images -->
+      <div class="shrink-0 basis-[50%] grow max-w-[400px] relative">
+      
+        <img src="/src/logingif.gif" alt="cheif" loading="lazy" />
+      </div>
+
+      <!-- login form -->
+      <div class="shrink-0 basis-[40%] grow max-w-[500px]">
+        <h2 class="text-3xl font-extrabold text-white">Welcome!</h2>
+        <div
+          class="flex items-center gap-[10px] bg-[#262221] h-[60px] rounded-tl-lg focus:border-b-2 focus:border-[#ea002a] rounded-tr-lg pl-[20px] text-white mt-[4px]">
+          <h3>92+</h3>
+          <input
+            type="text"
+            class="w-full h-full bg-[#262221] outline-none focus:border-b-2 focus:border-[#ea002a]" />
+        </div>
+        <!-- buttons -->
+        <div class="w-full mt-[10px] text-white font-bold">
+          <button class="bg-rose-600 w-full py-[10px] rounded-[5px]">
+            Login
+          </button>
+
+          <div
+            class="w-full flex justify-around items-center bg-[#ea002a] mt-[10px] py-[10px] rounded-[5px]">
+            <i class="fa-brands fa-google pl-[20px]"></i>
+            <button class="grow">Login With Google</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      class="w-[full] bg-[#1c1816] mt-[20px] pt-[20px] text-white pb-[20px] text-[18px]">
+      <section class="w-[90%] mx-auto">
+        <!-- social -->
+        <section
+          class="flex items-center gap-[40px] place-content-between sm:place-content-center">
+          <a href="#">
+            <img src="/src/kffclogo.png" alt="logo" loading="lazy" />
+          </a>
+          <div>
+            <a href="#">
+              <i
+                class="fa-brands fa-facebook-f text-white text-3xl pl-[8px]"></i
+            ></a>
+            <a href="#">
+              <i class="fa-brands fa-instagram text-white text-3xl pl-[8px]"></i
+            ></a>
+            <a href="#">
+              <i class="fa-brands fa-youtube text-white text-3xl pl-[8px]"></i>
+            </a>
+          </div>
+        </section>
+
+        <!-- primary menu -->
+        <section class="w-full flex mt-[20px] flex-wrap gap-[10px]">
+          <div class="basis-[20%] grow min-w-[156px]">
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Mitao Bhook </a></li>
+              <li><a href="#">Mitao Bhook - Scholarship </a></li>
+              <li><a href="#">Privacy Policy </a></li>
+              <li><a href="#">Careers </a></li>
+            </ul>
+          </div>
+          <!-- section 2 reach section -->
+          <div class="basis-[20%] grow min-w-[156px]">
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Store Locator </a></li>
+              <li><a href="#">Track Order </a></li>
+            </ul>
+          </div>
+          <!-- legal -->
+          <div class="basis-[20%] grow min-w-[156px]">
+            <ul>
+              <li><a href="#">Terms & Conditions</a></li>
+            </ul>
+          </div>
+
+          <!-- download section -->
+          <div class="basis-[20%] grow min-w-[156px] flex gap-[10px]">
+            <a href="#"
+              ><img
+                src="/src/appstore.png"
+                alt="appstore download"
+                loading="lazy"
+            /></a>
+            <a href="#"
+              ><img
+                src="/src/playstore.png"
+                alt="playstore download"
+                loading="lazy"
+            /></a>
+          </div>
+        </section>
+
+        <!-- copyright section -->
+        <section class="flex flex-wrap mt-[10px] place-content-between">
+          <h6 class="min-w-[180px]">2025 KFC. All rights reserved</h6>
+          <div class="min-w-[180px]">
+            <h6
+              class="font-bold text-[#ea002a] border-b inline-block pb-[3px] mb-[10px]">
+              Powered by
+            </h6>
+            <p>SimpleX Technology Solutions</p>
+          </div>
+        </section>
+      </section>
+    </footer>
+    <script src="./kfc.js"></script>
+    <script
+      src="https://kit.fontawesome.com/2aebaea6f2.js"
+      crossorigin="anonymous"></script>
+  </body>
+</html>

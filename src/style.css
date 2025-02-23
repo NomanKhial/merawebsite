@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.merarounded{
+    border-radius: 50% 50% 3% 50%;
+}
+
+::-webkit-scrollbar{
+    width: 1px;
+}
+
+body::-webkit-scrollbar-thumb{
+    background: #ccc;
+}
+
+.xc::-webkit-scrollbar{
+    display: none;
+}
+
+.translateevent:hover{
+    transform: translateY(-10px);
+    transition: all 600ms linear;
+}
+
+footer a:hover{
+    color: #ea002a;
+}
+
+.loginform{
+    display: none;
+}
+
